@@ -1,5 +1,6 @@
-const Itinerary = require("./Itinerary");
+// const Itinerary = require("./Itinerary");
 
+    (function exportShip() {
     class Ship {
     constructor(itinerary) {
         this.itinerary = itinerary;
@@ -31,7 +32,11 @@ const Itinerary = require("./Itinerary");
         this.currentPort.addShip(this)
     };
     };
-    // a falsy value is false, 0, null, NaN etc
 
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = Ship;
+    } else {
+        window.Ship = Ship;
+    }
+}());
 
-module.exports = Ship;

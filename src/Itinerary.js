@@ -1,6 +1,16 @@
 
-function Itinerary(ports) {
-    this.ports = ports;
+(function exportItinerary() {
+    class Itinerary {
+    constructor(ports) {
+    this.ports = ports
+    }
 }
 
-module.exports = Itinerary;
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Itinerary;
+} else {
+    window.Itinerary = Itinerary;
+}
+}());
+
+// module.exports = Itinerary;
