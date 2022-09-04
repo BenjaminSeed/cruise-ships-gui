@@ -3,5 +3,6 @@ function Controller () {
 }
 
 Controller.prototype.initialiseSea = function initialiseSea() {
+    window.setInterval(() => {}, 1000);
     
 }
