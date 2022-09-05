@@ -25,7 +25,7 @@
         
     }
     // see dependency inversion
-    dock(port) {
+    dock() {
         const itinerary = this.itinerary;
         const previousPortIndex = itinerary.ports.indexOf(this.previousPort);
         this.currentPort = itinerary.ports[previousPortIndex + 1];

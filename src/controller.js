@@ -16,7 +16,7 @@
             document.querySelector('#viewport').style.backgroundImage = `url('${backgrounds[backgroundIndex % backgrounds.length]}')`;
             backgroundIndex += 1;
           }, 1000);
-        };
+        }
 
             renderPorts(ports) {
              const portsElement = document.querySelector('#ports');
@@ -35,7 +35,18 @@
                 portsElement.style.width = `${portsElementWidth + 256}px`;
               });
               };
-            };
+
+        renderShip(ship) { // ship parameter will accept an argument of a Ship object
+          const shipPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
+          const portElement = document.querySelector(`[data-port-index='${shipPortIndex}']`);
+
+          const shipElement = document.querySelector('#ship');
+
+          shipElement.style.top = `${portElement.offSetTop + 32}px`;
+          shipElement.style.left = `${portElement.offSetLeft - 32}px`;
+        }
+    }
+      
 
     if (typeof module !== 'undefined' && module.exports) {
        module.exports = Controller;
