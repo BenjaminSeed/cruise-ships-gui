@@ -1,5 +1,4 @@
 // const Itinerary = require("./Itinerary");
-
     (function exportShip() {
     class Ship {
     constructor(itinerary) {
@@ -18,13 +17,12 @@
             throw new Error('End of itinerary reached');
         }
 
-        // removeShip from currentPort
         this.previousPort = this.currentPort;
         this.currentPort = null;
         this.previousPort.removeShip(this);
         
     }
-    // see dependency inversion
+
     dock() {
         const itinerary = this.itinerary;
         const previousPortIndex = itinerary.ports.indexOf(this.previousPort);

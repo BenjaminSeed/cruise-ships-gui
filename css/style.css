@@ -9,10 +9,6 @@ body {
     align-items: center;
 }
 
-/* specify position relative because any items in viewport base XY co-ordinates
-top left of viewport not the browser*/
-/* overflow-x: auto to scroll horizontally if any children exceen width*/
-
 #viewport {
     width: 640px;
     height: 256px;
@@ -38,4 +34,24 @@ top left of viewport not the browser*/
     height: 64px;
     background-image: url('../images/ship.png');
     position: absolute;
+}
+
+#sailbutton {
+    border: 0;
+    background-color: #FB3640;
+    border-bottom: 4px solid #d8040f;
+    color: white;
+    font-family: inherit;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#sailbutton:focus {
+    background-color: #d8040f;
+    border-bottom-width: 0;
+    padding-top: 14px;
 }

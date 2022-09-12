@@ -1,5 +1,4 @@
 // const Ship = require("./Ship");
-
 (function exportPort() {
 class Port {
     constructor(name) {
@@ -23,8 +22,3 @@ class Port {
         window.Port = Port;
       }
     }());
-
-    // module.exports = Port;
- 
-        // this.ships.splice(ship, 1)
-        // added const shipIndex = this.ships.indexOf(ship); despite test passing
